@@ -13,15 +13,15 @@ function* counter() {
 
 const count = counter();
 
-function callHash() {
+function doHash() {
     crypto.pbkdf2('a', 'b', 100000, 512, 'sha512', () => {
         console.log(`${count.next().value}:`, Date.now() - start);
     });
 }
 
-callHash();
-callHash();
-callHash();
-callHash();
-callHash();
-callHash();
+doHash();
+doHash();
+doHash();
+doHash();
+doHash();
+doHash();
